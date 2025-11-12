@@ -1,0 +1,120 @@
+<!doctype html> <!--Doc en html-->
+<html lang="es"> <!--Doc en español-->
+<head>
+ <meta charset="UTF-8"> <!--codifica caracteres-->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ajusta el diseño a móviles-->
+ <title>GUIA DIGITAL CIUDADANA</title> <!--Título que aparece en la pestaña -->
+ <style>
+   body{
+     margin: 0; /* Elimina márgenes por defecto */
+     font-family: Arial, sans-serif; /* Fuente del texto */
+   }
+   /* ---- ESTILO DEL MENÚ PRINCIPAL ---- */
+   nav {
+   	background: #E9D3F0; /* Fondo gris oscuro */
+   }
+   nav ul {
+   	 list-style: none; /* Quita viñetas de la lista */
+   	 margin: 0; /* Elimina márgenes */
+   	 padding: 0; /* Elimina relleno */
+   	 display: flex; /* Coloca los <li> en linea (horizontal) */
+   }
+   nav ul li {
+   	 position: relative; /* Necesario para posicionar el submenú debajo */
+   }
+   nav ul li a {
+   	 display: block; /* Hace que todo el área sea clickeable */
+   	 padding: 15px 20px; /* Espaciado interno */
+   	 color: white; /* Texto blanco */
+   	 text-decoration: none; /*Quita lo subrayado*/
+   }
+   nav ul li a:hover {
+   	background: #BFA2BD; /* Cambia el fondo al pasar el raton */
+   }
+
+    /* ----Estilo del submenú----*/
+    nav ul li ul {
+    	display: none;       /*Ocultar el submenu por defecto */
+    	position: absolute;  /*Posiciona el submenu relativo al padre */
+    	top: 100%;           /*Lo coloca justo debajo del elemento padre*/
+    	left: 0;             /*Alineado a la izquierda*/
+    	background: #F8;    /*Fondo de submenu*/
+    	padding: 0;          /*Sin espacio interno*/
+    	min-width: 180px;        /*Ancho minimo del submenu*/
+    	}
+    		nav ul li ul li a {
+    			padding: 10px 15px; /* Espaciado interno en las opciones */
+    	}
+    	nav ul li ul li a:hover {
+    		background: #E3B8E0;    /*Color mas claro al pasar el raton */
+    	}
+
+    	/* ---- MOSTRAR EL SUBMENU ---- */
+    	nav ul li:hover > ul {
+    		display: block; /* Cuando paso el raton sobre el <li>, muestra el submenu*/
+    	}
+    </style>
+</head>
+<body>
+	<!--Menú principal-->
+	<nav>
+		<ul>
+
+			<li>
+			  <p><a href="https://gobmx.page/ActaNacimiento/">ACTA DE NACIMIENTO</a></p> <!--Flecha indicando submenú--> 
+			  <ul>
+			  	<li><a href="https://www.gob.mx/ActaNacimiento/folioSeguimiento/">FOLIO DE SEGUIMIENTO</a></li>
+			  	<li><a href="acta.html">INFORMACIÓN QUE NECESITAS</a></li>
+			  	<li><a href="#">.......</a></li>
+			  </ul>
+			</li>
+			<li>
+			  <p><a href="https://www.gob.mx/curp/">CURP</a></p> <!--Flecha indicando submenú--> 
+			  <ul>
+			  	<li><a href="curp.html">INFORMACIÓN QUE NECESITAS</a></li>
+			  	<li><a href="#">.......</a></li>
+			  </ul>
+			</li>
+			<li><p><a href="https://share.google/7ZWnSaU9mCdwy5HCt">LICENCIA DE CONDUCIR</a></p>
+				<ul>
+			  	<li><a href="https://smovilidad.edomex.gob.mx/citas_internet">AGENDAR CITAS</a></li>
+			  	<li><a href="liccon.html">INFORMACION QUE NECESITAS</a></li>
+			  </ul>
+			  <li><P><a href="https://share.google/D3IEMuwBrTL2FHDaa">SAT</a></p>
+			   <ul>
+			   	
+			   	<li><a href="https://citas.sat.gob.mx/">AGENDAR CITAS</a></li>
+			   	<li><a href=" https://share.google/kg2M34giuzqjyeFCn">RFC</a></li>
+			   
+          <li><a href=" https://share.google/XewbSv71jWmGKOI32 ">CONSTANCIA DE SITUACION FISCAL</a></li>
+			  	<li><a href="https://share.google/cjTLGDloj8WC7sskx">DECLARACION PERSONAS FISICAS</a></li>
+			  	<li><a href="SAT.html">INFORMACION QUE NECESITAS</a></li>
+   			  </ul>	
+			  <li><p><a href="https://share.google/bEhPbZOFD9ReqhYrG ">REGISTRO CIVIL</a></p>
+			  <ul>
+			  	<li><a href="regciv.html">INFORMACION QUE NECESITAS</a></li>
+			  </ul>
+			</li>
+			  <li><p><a href="https://share.google/xf8e4fKcFUgO9Znsu"´>PASAPORTE</a></p>
+			  <ul>
+			  	<li><a href="pass.html">INFORMACION QUE NECESITAS</a></li>
+			  </ul>
+			  </li>
+			<li>
+       	<a href="index3.php"><img src="inte.png" width="60" height="60"></a>
+       </li>
+       <ul>
+				<li>
+					<p><form method="get" action="https://www.google.com/search" target="_blank">
+						<input type="search" name="q" placeholder="Introducir busqueda" autofocus required>
+						<input type="submit">
+					</form></p>
+				</li>
+			</ul>
+		</ul>
+	</nav>
+		<center>
+	<img src="tr1.png" width="1340">
+  </center>
+</body>
+</html>
