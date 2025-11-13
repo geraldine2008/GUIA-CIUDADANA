@@ -1,92 +1,57 @@
-<!doctype html> <!-- Documento HTML -->
-<html lang="es"> <!-- Documento en español -->
+<!doctype html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8"> <!-- Codifica caracteres -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta el diseño a móviles -->
-  <title>GUÍA DIGITAL CIUDADANA</title> <!-- Título de la pestaña -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUÍA DIGITAL CIUDADANA</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #ffffff;
     }
 
-    /* ---- ESTILO DEL MENÚ PRINCIPAL ---- */
+    /* ---- MENÚ PRINCIPAL ---- */
     nav {
-      background: #6A0DAD; /* Violeta fuerte */
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      background: #6A0DAD; /* Violeta */
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 5px 15px;
     }
 
-    nav ul li {
-      position: relative;
+    /* Logo */
+    .logo img {
+      height: 65px;
+      width: auto;
     }
 
-    nav ul li a {
-      display: block;
-      padding: 15px 20px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav ul li a:hover {
-      background: #FFC300; /* Amarillo brillante al pasar el ratón */
-      color: black;
-    }
-
-    /* ---- ESTILO DEL SUBMENÚ ---- */
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #8A2BE2;
-      padding: 0;
-      min-width: 220px;
-      border-radius: 5px;
-      z-index: 1000;
-    }
-
-    nav ul li ul li a {
-      padding: 10px 15px;
-      color: white;
-    }
-
-    nav ul li ul li a:hover {
-      background: #FF5733;
-    }
-
-    /* ---- MOSTRAR EL SUBMENÚ ---- */
-    nav ul li:hover > ul {
-      display: block;
-    }
-
-    /* ---- FORMULARIO DE BÚSQUEDA ---- */
+    /* Buscador */
     form {
       display: flex;
       align-items: center;
       gap: 5px;
-      padding: 10px;
+      background: white;
+      border-radius: 8px;
+      padding: 3px 5px;
     }
 
     input[type="search"] {
       padding: 6px;
+      border: none;
+      outline: none;
       border-radius: 5px;
-      border: 1px solid #ccc;
+      width: 160px;
     }
 
     input[type="submit"] {
       background: #FFC300;
       border: none;
-      padding: 6px 10px;
+      padding: 6px 12px;
       border-radius: 5px;
+      font-weight: bold;
       cursor: pointer;
     }
 
@@ -95,10 +60,65 @@
       color: white;
     }
 
+    /* ---- ENLACES DEL MENÚ ---- */
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      background: #FFC300;
+      color: black;
+      border-radius: 5px;
+    }
+
+    /* ---- SUBMENÚ ---- */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background: #8A2BE2;
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+
+    nav ul li ul li a {
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+
+    nav ul li ul li a:hover {
+      background: #FF5733;
+    }
+
+    nav ul li:hover > ul {
+      display: block;
+    }
+
     /* ---- ENLACE INFERIOR ---- */
     .portal {
-      text-align: left;
-      padding: 8px;
+      text-align: center;
+      margin: 10px;
     }
 
     .portal a {
@@ -115,9 +135,35 @@
       background-color: #e0e5f2;
     }
 
-    img {
+    /* Imagen principal */
+    img.portada {
       display: block;
+      width: 100%;
+      max-width: 1340px;
       margin: 0 auto;
+      border-radius: 8px;
+    }
+
+    /* ---- VERSIÓN MÓVIL ---- */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      form {
+        width: 90%;
+        justify-content: center;
+      }
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li ul {
+        position: static;
+      }
     }
   </style>
 </head>
@@ -125,20 +171,18 @@
 <body>
   <script src="gera.js"></script>
 
-  <!-- Menú principal -->
   <nav>
+    <div class="logo">
+      <img src="cuidadano.png" alt="Logo Ciudadano">
+    </div>
+
+    <form method="get" action="https://www.google.com/search" target="_blank">
+      <input type="search" name="q" placeholder="Introducir búsqueda" autofocus required>
+      <input type="submit" value="Buscar">
+    </form>
+
     <ul>
-      <li><img src="cuidadano.png" width="80" height="80" alt="Logo Ciudadano"></li>
-
-      <li>
-        <form method="get" action="https://www.google.com/search" target="_blank">
-          <input type="search" name="q" placeholder="Introducir búsqueda" autofocus required>
-          <input type="submit" value="Buscar">
-        </form>
-      </li>
-
-      <li>
-        <a href="bienvenido.html">BIENVENIDO</a>
+      <li><a href="bienvenido.html">BIENVENIDO</a>
         <ul>
           <li><a href="como.html">¿CÓMO USAR LA PÁGINA?</a></li>
         </ul>
@@ -147,8 +191,7 @@
       <li><a href="ciudadano.html">CIUDADANO</a></li>
       <li><a href="informacion.html">INFORMACIÓN</a></li>
 
-      <li>
-        <a href="tramite.html">TRÁMITE</a>
+      <li><a href="tramite.html">TRÁMITE</a>
         <ul>
           <li><a href="tramites.html">ADMINISTRATIVOS</a></li>
           <li><a href="gestionar.html">GESTIONAR</a></li>
@@ -157,24 +200,19 @@
 
       <li><a href="solicitud.html">SOLICITUD</a></li>
 
-      <li>
-        <a href="pago/pago.html">PAGO</a>
+      <li><a href="pago/pago.html">PAGO</a>
         <ul>
           <li><a href="pago.html">SERVICIOS Y DERECHOS</a></li>
         </ul>
       </li>
 
-      <li>
-        <a href="documentos.html">DOCUMENTO</a>
+      <li><a href="documentos.html">DOCUMENTO</a>
         <ul>
           <li><a href="galeria.html">GALERÍAS</a></li>
-          <li><a href="#">----</a></li>
-          <li><a href="#">----</a></li>
         </ul>
       </li>
 
-      <li>
-        <a href="#">VISITANTES</a>
+      <li><a href="#">VISITANTES</a>
         <ul>
           <li><a href="index2.php">GUARDA TU VISITA</a></li>
         </ul>
@@ -188,8 +226,7 @@
     </a>
   </div>
 
-  <center>
-    <img src="portada.png" width="1340" alt="Portada Guía Digital Ciudadana">
-  </center>
+  <img src="portada.png" alt="Portada Guía Digital Ciudadana" class="portada">
+
 </body>
 </html>
