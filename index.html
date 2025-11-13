@@ -1,133 +1,195 @@
-<!doctype html> <!--Doc en html-->
-<script src="gera.js"></script>
-<html lang="es"> <!--Doc en español-->
+<!doctype html> <!-- Documento HTML -->
+<html lang="es"> <!-- Documento en español -->
 <head>
- <meta charset="UTF-8"> <!--codifica caracteres-->
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ajusta el diseño a móviles-->
- <title>GUIA DIGITAL CIUDADANA</title> <!--Título que aparece en la pestaña -->
- <style>
-   body{
-     margin: 0; /* Elimina márgenes por defecto */
-     font-family: Arial, sans-serif; /* Fuente del texto */
-   }
-   /* ---- ESTILO DEL MENÚ PRINCIPAL ---- */
-   nav {
-   	background: #3498DB; /* Fondo gris oscuro */
-   }
-   nav ul {
-   	 list-style: none; /* Quita viñetas de la lista */
-   	 margin: 0; /* Elimina márgenes */
-   	 padding: 0; /* Elimina relleno */
-   	 display: flex; /* Coloca los <li> en linea (horizontal) */
-   }
-   nav ul li {
-   	 position: relative; /* Necesario para posicionar el submenú debajo */
-   }
-   nav ul li a {
-   	 display: block; /* Hace que todo el área sea clickeable */
-   	 padding: 15px 20px; /* Espaciado interno */
-   	 color: white; /* Texto blanco */
-   	 text-decoration: none; /*Quita lo subrayado*/
-   }
-   nav ul li a:hover {
-   	background: #FFC300; /* Cambia el fondo al pasar el raton */
-   }
+  <meta charset="UTF-8"> <!-- Codifica caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta el diseño a móviles -->
+  <title>GUÍA DIGITAL CIUDADANA</title> <!-- Título de la pestaña -->
 
-    /* ----Estilo del submenú----*/
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ---- ESTILO DEL MENÚ PRINCIPAL ---- */
+    nav {
+      background: #6A0DAD; /* Violeta fuerte */
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      background: #FFC300; /* Amarillo brillante al pasar el ratón */
+      color: black;
+    }
+
+    /* ---- ESTILO DEL SUBMENÚ ---- */
     nav ul li ul {
-    	display: none;       /*Ocultar el submenu por defecto */
-    	position: absolute;  /*Posiciona el submenu relativo al padre */
-    	top: 100%;           /*Lo coloca justo debajo del elemento padre*/
-    	left: 0;             /*Alineado a la izquierda*/
-    	background: gray;    /*Fondo de submenu*/
-    	padding: 0;          /*Sin espacio interno*/
-    	min-width: 300px;        /*Ancho minimo del submenu*/
-    	}
-    		nav ul li ul li a {
-    			padding: 10px 15px; /* Espaciado interno en las opciones */
-    	}
-    	nav ul li ul li a:hover {
-    		background: #FF5733;    /*Color mas claro al pasar el raton */
-    	}
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #8A2BE2;
+      padding: 0;
+      min-width: 220px;
+      border-radius: 5px;
+      z-index: 1000;
+    }
 
-    	/* ---- MOSTRAR EL SUBMENU ---- */
-    	nav ul li:hover > ul {
-    		display: block; /* Cuando paso el raton sobre el <li>, muestra el submenu*/
-    	}
-    </style>
+    nav ul li ul li a {
+      padding: 10px 15px;
+      color: white;
+    }
+
+    nav ul li ul li a:hover {
+      background: #FF5733;
+    }
+
+    /* ---- MOSTRAR EL SUBMENÚ ---- */
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    /* ---- FORMULARIO DE BÚSQUEDA ---- */
+    form {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 10px;
+    }
+
+    input[type="search"] {
+      padding: 6px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      background: #FFC300;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background: #FF5733;
+      color: white;
+    }
+
+    /* ---- ENLACE INFERIOR ---- */
+    .portal {
+      text-align: left;
+      padding: 8px;
+    }
+
+    .portal a {
+      background-color: #f5f7fb;
+      border: 1px solid #d0d9ee;
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 14px;
+      color: #0b3d91;
+      text-decoration: none;
+    }
+
+    .portal a:hover {
+      background-color: #e0e5f2;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
 </head>
+
 <body>
-	<!--Menú principal-->
-	<nav>
-		<ul>
-			<!--Elemento simple sin submenú-->
-			<li>
-				<img src="cuidadano.png" width="80" height="80">
-			</li>
+  <script src="gera.js"></script>
 
-			<ul>
-				<li>
-					<p><form method="get" action="https://www.google.com/search" target="_blank">
-						<input type="search" name="q" placeholder="Introducir busqueda" autofocus required>
-						<input type="submit">
-					</form></p>
-				</li>
-			</ul>
+  <!-- Menú principal -->
+  <nav>
+    <ul>
+      <li><img src="cuidadano.png" width="80" height="80" alt="Logo Ciudadano"></li>
 
-			<!--Elemento con submenú-->
-			<ul>
-			<li>
-			  <p><a href="bienvenido.html">BIENVENIDO</a></p> <!--Flecha indicando submenú-->
-			  <ul>
-			  <li><p><a href="como.html">¿COMO USAR LA PAGINA?</a></p></li>
-			</ul>
-			</li>
-			<li>
-			  <p><a href="ciudadano.html">CIUDADANO</a></p> <!--Flecha indicando submenú-->
-			  <li> <p><a href="informacion.html">INFORMACION</a></p> </li> 
-			</li>
+      <li>
+        <form method="get" action="https://www.google.com/search" target="_blank">
+          <input type="search" name="q" placeholder="Introducir búsqueda" autofocus required>
+          <input type="submit" value="Buscar">
+        </form>
+      </li>
 
-			<li>
-			  <p><a href="tramite.html">TRAMITE</a></p> <!--Flecha indicando submenú--> 
-			  <ul>
-       <li> <p><a href="tramites.html">ADMINISTRATIVOS</a></p> </li> <!--Flecha indicando submenú--> 
-			 <li> <p><a href="gestionar.html">GESTIONAR</a></p> </li>
-		  </ul>
-			</li>
-			<li> 
-				<p><a href="solicitud.html">SOLICITUD</a></p>
-		
-			</li>
-			<li>
-			  <p><a href="pago/pago.html">PAGO</a></p> <!--Flecha indicando submenú--> 
-			  <ul>
-       <li> <p><a href="pago.html">SERVICIOS Y DERECHO</a></p></li>
-     </ul>
-			</li>
-			 <li> 
-		  <p><a href="documentos.html">DOCUMENTO</a></p> <!--Flecha indicando submenú-->
-			 <ul>
-       <li> <p><a href="galeria.html">GALERIAS</a></p> </li> <!--Flecha indicando submenú--> 
-			 <li> <p><a href="#">----</a></p> </li>
-       <li> <p><a href="#">----</a></p> </li>
-		  </ul>
-		   </li>
-		   <li>
-			  <p><a href="#">VISITANTES</a></p> <!--Flecha indicando submenú--> 
-			  <ul>
-       <li> <p><a href="index2.php">GUARDA TU VISITA</a></p> </li> 
-       </ul>
-       
-		</ul>
-	</nav>
-	<div style="text-align: left; padding: 8px;">
-  <a href=" https://share.google/Q5YCviwYntzpR3B4T " target="_blank" style="background-color: #f5f7fb; border: 1px solid #d0d9ee; border-radius: 8px; padding: 6px 10px; font-size: 14px; color: #0b3d91; text-decoration: none;">
-    Portal ayuntamiento Valle de Bravo 2025-2026</a>
-   </div>
+      <li>
+        <a href="bienvenido.html">BIENVENIDO</a>
+        <ul>
+          <li><a href="como.html">¿CÓMO USAR LA PÁGINA?</a></li>
+        </ul>
+      </li>
 
-	<center>
-	<img src="portada.png" width="1340">
+      <li><a href="ciudadano.html">CIUDADANO</a></li>
+      <li><a href="informacion.html">INFORMACIÓN</a></li>
+
+      <li>
+        <a href="tramite.html">TRÁMITE</a>
+        <ul>
+          <li><a href="tramites.html">ADMINISTRATIVOS</a></li>
+          <li><a href="gestionar.html">GESTIONAR</a></li>
+        </ul>
+      </li>
+
+      <li><a href="solicitud.html">SOLICITUD</a></li>
+
+      <li>
+        <a href="pago/pago.html">PAGO</a>
+        <ul>
+          <li><a href="pago.html">SERVICIOS Y DERECHOS</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="documentos.html">DOCUMENTO</a>
+        <ul>
+          <li><a href="galeria.html">GALERÍAS</a></li>
+          <li><a href="#">----</a></li>
+          <li><a href="#">----</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">VISITANTES</a>
+        <ul>
+          <li><a href="index2.php">GUARDA TU VISITA</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="portal">
+    <a href="https://share.google/Q5YCviwYntzpR3B4T" target="_blank">
+      Portal Ayuntamiento Valle de Bravo 2025-2026
+    </a>
+  </div>
+
+  <center>
+    <img src="portada.png" width="1340" alt="Portada Guía Digital Ciudadana">
   </center>
 </body>
 </html>
-
