@@ -74,12 +74,13 @@
     .video-container {
       position: relative;
       width: 100%;
-      max-width: 700px;
+      max-width: 600px;
       margin: auto;
       padding-bottom: 56.25%; /* proporción 16:9 */
       height: 0;
       overflow: hidden;
       border-radius: 15px;
+      background: #000;
     }
 
     .video-container iframe {
@@ -133,9 +134,20 @@
       section {
         padding: 20px 10px;
       }
-      h1, h2 {
-        font-size: 1.2em;
+      .video-section {
+        padding: 20px 10px;
+      }
+      .video-container {
+        max-width: 100%;
+        padding-bottom: 65%; /* un poco más alto para móviles */
+      }
+      h1, h2, h3 {
+        font-size: 1em;
         text-align: center;
+      }
+      .btn {
+        font-size: 0.9em;
+        padding: 10px 20px;
       }
     }
   </style>
@@ -191,6 +203,14 @@
           title="Video desde Google Drive">
         </iframe>
       </div>
+      <p style="margin-top:15px; font-size:14px;">
+        Si no se reproduce, 
+        <a href="https://drive.google.com/file/d/1wOQi2zdICuu_o83jCj6QrzhvaY_TF6DK/view" 
+           target="_blank" 
+           style="color:#7a3db8; text-decoration:underline;">
+           toca aquí para abrirlo en Google Drive
+        </a>.
+      </p>
     </div>
 
     <div style="text-align: center; margin-top: 40px;">
