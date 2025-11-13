@@ -70,6 +70,27 @@
       margin-top: 60px;
     }
 
+    /* 🔹 Contenedor responsive para video */
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      margin: auto;
+      padding-bottom: 56.25%; /* proporción 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 15px;
+    }
 
     .btn {
       display: inline-block;
@@ -103,22 +124,20 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* 🔹 Ajustes para pantallas pequeñas */
     @media (max-width: 600px) {
-  body {
-    padding: 10px;
-  }
-  main {
-    padding: 10px;
-  }
-  h1, h2 {
-    font-size: 1.2em;
-    text-align: center;
-  }
-  iframe {
-    width: 100%;
-    height: 200px;
-  }
-}
+      body {
+        padding: 10px;
+      }
+      section {
+        padding: 20px 10px;
+      }
+      h1, h2 {
+        font-size: 1.2em;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -139,39 +158,39 @@
 
     <div class="steps">
       <div class="step">
-        <h3>⿡ Ingresa al sitio</h3>
+        <h3>1️⃣ Ingresa al sitio</h3>
         <p>Accede a la Guía Digital Ciudadana desde tu computadora o celular escribiendo la dirección oficial del portal.</p>
       </div>
 
       <div class="step">
-        <h3>⿢ Explora el menú</h3>
+        <h3>2️⃣ Explora el menú</h3>
         <p>Desde el menú superior podrás acceder a secciones como Información, Trámites, Pagos y Contacto.</p>
       </div>
 
       <div class="step">
-        <h3>⿣ Consulta información</h3>
+        <h3>3️⃣ Consulta información</h3>
         <p>Revisa los requisitos, horarios y documentos necesarios para realizar cualquier trámite municipal.</p>
       </div>
 
       <div class="step">
-        <h3>⿤ Realiza pagos en línea</h3>
+        <h3>4️⃣ Realiza pagos en línea</h3>
         <p>En la sección “Pagos” encontrarás bancos, puntos autorizados y opciones para pagar de manera digital.</p>
       </div>
 
       <div class="step">
-        <h3>⿥ Contacta al municipio</h3>
+        <h3>5️⃣ Contacta al municipio</h3>
         <p>Si tienes dudas, puedes escribir directamente desde la sección de Contacto o consultar los teléfonos disponibles.</p>
       </div>
     </div>
 
     <div class="video-section">
       <h3>🎥 Tutorial en video</h3>
-            <center>
-                  <iframe src="https://drive.google.com/file/d/1wOQi2zdICuu_o83jCj6QrzhvaY_TF6DK/preview"
-            width="640" height="360" allow="autoplay; encrypted-media"
-            title="Video desde Google Drive">
-    </iframe>
-  </center>
+      <div class="video-container">
+        <iframe src="https://drive.google.com/file/d/1wOQi2zdICuu_o83jCj6QrzhvaY_TF6DK/preview"
+          allow="autoplay; encrypted-media"
+          title="Video desde Google Drive">
+        </iframe>
+      </div>
     </div>
 
     <div style="text-align: center; margin-top: 40px;">
