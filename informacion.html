@@ -1,38 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>ASISTENCIA GRUPO 502</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="estilos_geraldine.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Pagos y Trámites</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3e8ff; /* lila claro */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #9d4edd, #c77dff); /* degradado violeta-lila */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: #5a189a; /* morado medio */
+            border-bottom: 2px solid #e0b3ff;
+            padding-bottom: 5px;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            background: #f8edff; /* fondo violeta muy claro */
+            margin: 8px 0;
+            padding: 10px;
+            border-left: 4px solid #9d4edd; /* violeta más oscuro */
+            border-radius: 6px;
+        }
+
+        a {
+            color: #7b2cbf;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            padding: 20px;
+            color: #555;
+        }
+
+        .volver {
+            display: inline-block;
+            margin-top: 15px;
+            background: linear-gradient(135deg, #9d4edd, #c77dff);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .volver:hover {
+            background: linear-gradient(135deg, #7b2cbf, #9d4edd);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <img src="IGM_GOBIERNO.jpg" align="left">
-    <img src="ciudadano.png" align="right">
-    
-    <font face="calibri" size=15 color=green>
-        COLEGIO DE ESTUDIOS CIENTÍFICOS Y TECNOLÓGICOS DEL ESTADO DE MÉXICO.
-    </font>
-    <hr width="100%">
-    
-    <font face="calibri" size=20 color=blue>
-        LISTA DE ASISTENCIA 502
-    </font>
-    
-    <form method="post">
-        <h1>PLANTEL VALLE DE BRAVO</h1>
-        <h2>REGISTRAR ESTUDIANTE</h2>
-        
-        <input type="text" name="numcontrol" placeholder="Número de control">
-        <input type="text" name="nombre" placeholder="Nombre estudiante">
-        <input type="text" name="apaterno" placeholder="Apellido Paterno">
-        <input type="text" name="amaterno" placeholder="Apellido Materno">
-        <input type="email" name="correoelectronico" placeholder="Correo institucional">
-        
-        <input type="submit" name="registrar_geraldine">
-    </form>
-    
-    <?php
-        include("registrar_geraldine.php");
-    ?>
+
+    <header>
+        <h1>Información de Pagos y Trámites</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Bancos y puntos autorizados para realizar pagos</h2>
+            <p>A continuación se enlistan algunos bancos y lugares donde puedes realizar tus pagos relacionados con los servicios o trámites:</p>
+            <ul>
+                <li>Banco BBVA: Abierto de 8:30am a 4:00pm.</li>
+                <li>Banco HSBC: Abierto de 9:00 am a 4:00pm.</li>
+                <li>Tesorería municipal: Aierto de 9:00am a 5:00pm.</li>
+                <li>Centro de Servicios Administrativos: Abierto de 9:00am a 4:30pm.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Trámites presenciales</h2>
+            <p>Si prefieres realizar tus trámites de manera presencial, también puedes acudir a los siguientes lugares:</p>
+            <ul>
+                <li>Presidencia municipal: Abierto de 9:00am a 4:00pm.</li>
+                <li>Registro civil: Abierto de 9:00am a 4:00pm.</li>
+                <li>Oficinas del ayuntamiento Valle de Bravo: Abierto de 9:00am a 5:00pm</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Pagos de servicios</h2>
+            <p>Si prefieres realizar tus trámites de manera presencial, también puedes acudir a los siguientes lugares, al dar click en lo siguiente podrás conocer los horarios de atención y que tipo de servicios puedes acudir a pagar:</p>
+            <ul>
+                <li><a href="oxxo.html">Tiendas de pago de conveniencia</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Direccion de bancos y puntos autorizados para realizar pagos</h2>
+            <p>Ubicaciones:</p>
+            <ul>
+                <li><a href="https://maps.app.goo.gl/T8ngNpdaVcY8hyur9?g_st=aw">Banco BBVA</a></li>
+                <li><a href="https://maps.app.goo.gl/ocbnGDP3v59dnjPg6">Banco HSBC</a></li>
+                <li><a href="https://maps.app.goo.gl/nroFnnePcgC5njKv6">Tesorería municipal</a></li>
+                <li><a href="https://maps.app.goo.gl/cBE9owLQ9aJrPw3JA">Centro de Servicios Administrativos</a></li>
+            </ul>
+                      <center>
+    <video width="50%" height="50%" controls>
+     <source src="vid4.mp4" type="video/mp4">
+    </video>
+  </center>
+        </section>
+
+        <a href="GERALDINE_MENU2.php" class="volver">← Volver al menú principal</a>
+    </main>
+
+    <footer>
+        <p>Guía Digital Ciudadana - Valle de Bravo © 2025</p>
+    </footer>
+
 </body>
 </html>
