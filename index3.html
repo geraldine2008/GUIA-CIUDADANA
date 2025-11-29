@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VISITANTES</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="estilos_geraldine2.css">
+</head>
+<body>
+    <img src="logogo.jpg" align="left" width="100" height="100">
+    
+    <font face="calibri" size=15 color=green>
+        BIENVENIDO AL SISTEMA DE TRAMITES Y SERVICIOS
+    </font>
+    <hr width="100%">
+    
+    <font face="calibri" size=20 color=blue>
+        GUARDA TU VISITA
+    </font>
+    
+    <form method="post">
+        <h1>VALLE DE BRAVO</h1>
+        <h2>COMPLETA TU REGISTRO</h2>
+        
+        <input type="text" name="NOMBRE" placeholder="Nombre visitante">
+        <input type="text" name="APPATERNO" placeholder="Apellido Paterno">
+        <input type="text" name="APMATERNO" placeholder="Apellido Materno">
+        <input type="text" name="LOCALIDAD" placeholder="Localidad">
+        <input type="text" name="MUNICIPIO" placeholder="Municipio">
+        
+        <input type="submit" name="registrar2">
+    </form>
+    
+    <?php
+        include("registrar2.php");
+    ?>
+</body>
+</html>
