@@ -9,17 +9,18 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
+      background-color: #F7F2FF; /* Violeta MUY claro */
     }
 
     /* ---- MENÚ PRINCIPAL ---- */
     nav {
-      background: #6A0DAD; /* Violeta */
+      background: #6A0DAD; /* Violeta oscuro */
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       padding: 5px 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
 
     /* Logo */
@@ -36,6 +37,7 @@
       background: white;
       border-radius: 8px;
       padding: 3px 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.15);
     }
 
     input[type="search"] {
@@ -80,11 +82,12 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.2s;
     }
 
     nav ul li a:hover {
-      background: #FFC300;
-      color: black;
+      background: #D9B3FF; /* Violeta claro */
+      color: #3A0066;
       border-radius: 5px;
     }
 
@@ -92,12 +95,13 @@
     nav ul li ul {
       display: none;
       position: absolute;
-      background: #8A2BE2;
+      background: #8A2BE2; /* Violeta medio */
       top: 100%;
       left: 0;
       min-width: 180px;
       border-radius: 5px;
-      z-index: 1000;
+      padding: 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     nav ul li ul li a {
@@ -108,7 +112,8 @@
     }
 
     nav ul li ul li a:hover {
-      background: #FF5733;
+      background: #D9B3FF;
+      color: #3A0066;
     }
 
     nav ul li:hover > ul {
@@ -118,21 +123,24 @@
     /* ---- ENLACE INFERIOR ---- */
     .portal {
       text-align: center;
-      margin: 10px;
+      margin: 20px;
     }
 
     .portal a {
-      background-color: #f5f7fb;
-      border: 1px solid #d0d9ee;
+      background-color: #D9B3FF; 
+      border: 1px solid #8A2BE2;
       border-radius: 8px;
-      padding: 6px 10px;
+      padding: 8px 12px;
       font-size: 14px;
-      color: #0b3d91;
+      color: #3A0066;
       text-decoration: none;
+      transition: 0.2s;
     }
 
     .portal a:hover {
-      background-color: #e0e5f2;
+      background-color: #8A2BE2;
+      color: white;
+      border-color: #6A0DAD;
     }
 
     /* Imagen principal */
@@ -140,8 +148,9 @@
       display: block;
       width: 100%;
       max-width: 1340px;
-      margin: 0 auto;
-      border-radius: 8px;
+      margin: 0 auto 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     /* ---- VERSIÓN MÓVIL ---- */
@@ -163,6 +172,7 @@
 
       nav ul li ul {
         position: static;
+        box-shadow: none;
       }
     }
   </style>
@@ -214,7 +224,7 @@
 
       <li><a href="#">VISITANTES</a>
         <ul>
-          <li><a href="index2.html">GUARDA TU VISITA</a></li>
+          <li><a href="index2.php">GUARDA TU VISITA</a></li>
         </ul>
       </li>
     </ul>
