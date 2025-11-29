@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Century Gothic', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+    background-color: #F8D7E3; /* rosa pastel */
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: #EBDCFB; /* lila claro */
+    margin: calc(25% + 100px);
+    margin-top: 70px;
+    margin-bottom: 30px;
+    padding: 50px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(150, 100, 200, 0.2);
+}
+
+/* Títulos */
+h1 {
+    color: #9B8CF2; /* morado suave */
+    font-size: 28px;
+    padding: 12px;
+}
+
+h2 {
+    color: #7A6BF0; /* violeta medio */
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Campos de texto */
+input {
+    width: calc(100% - 20px);
+    background-color: #FFF7FB; /* blanco rosado */
+    border: 1px solid #D8BFD8; /* borde lila */
+    padding: 10px;
+    margin-top: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Efecto al enfocar */
+input:focus {
+    border-color: #B497E6;
+    box-shadow: 0 0 5px #C9E6F5;
+}
+
+/* Botón */
+input[type='submit'] {
+    background-color: #C9E6F5; /* azul bebé */
+    color: #4B4B4B;
+    width: calc(80% - 20px);
+    margin: 22px 10%;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+input[type='submit']:hover {
+    background-color: #B0D8F2;
+    transform: scale(1.03);
+}
+
+/* Mensajes */
+.correctomtra {
+    background-color: #F5A9BC; /* rosa fuerte pastel */
+    color: #4B4B4B;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.incorrectomtra {
+    background-color: #C8A2C8; /* lila pastel oscuro */
+    color: #fff;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
