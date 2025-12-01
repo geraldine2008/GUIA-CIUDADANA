@@ -13,19 +13,32 @@
       background: #f5f1f8;
     }
 
-    /* ---------- MENÚ ---------- */
+    /* ---------------- HEADER ---------------- */
     nav {
       background: #D8B7E6;
-      padding: 0;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     }
 
+    /* ---------- ICONO HAMBURGUESA ---------- */
+    .menu-toggle {
+      font-size: 28px;
+      cursor: pointer;
+      color: #ffffff;
+      display: none;
+    }
+
+    /* ---------- LISTA PRINCIPAL ---------- */
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
       align-items: center;
+      gap: 10px;
     }
 
     nav ul li {
@@ -34,7 +47,7 @@
 
     nav ul li a {
       display: block;
-      padding: 15px 20px;
+      padding: 12px 15px;
       color: #ffffff;
       text-decoration: none;
       font-weight: bold;
@@ -42,9 +55,10 @@
 
     nav ul li a:hover {
       background: #B694C8;
+      border-radius: 5px;
     }
 
-    /* ---------- SUBMENÚ ---------- */
+    /* ----------- SUBMENÚ ----------- */
     nav ul li ul {
       display: none;
       position: absolute;
@@ -55,6 +69,7 @@
       padding: 0;
       border-radius: 0 0 8px 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      z-index: 20;
     }
 
     nav ul li ul li a {
@@ -63,32 +78,25 @@
       font-weight: normal;
     }
 
-    nav ul li ul li a:hover {
-      background: #d7b8e6;
-    }
-
     nav ul li:hover > ul {
       display: block;
     }
 
-    /* ---------- BUSCADOR ---------- */
+    /* -------- BUSCADOR -------- */
     .buscador {
       margin-left: auto;
-      padding: 10px;
     }
 
-    .buscador input[type="search"] {
+    .buscador input {
       padding: 6px 10px;
       border-radius: 6px;
       border: 1px solid #ccc;
     }
 
     .buscador input[type="submit"] {
-      padding: 6px 12px;
-      border-radius: 6px;
-      border: none;
       background: #B694C8;
       color: white;
+      border: none;
       cursor: pointer;
     }
 
@@ -96,7 +104,52 @@
       background: #9e7ab3;
     }
 
-    /* --------- IMAGEN HEADER --------- */
+    /* ----------- RESPONSIVE PARA TELÉFONO ----------- */
+    @media (max-width: 768px) {
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        padding-top: 10px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      /* Submenú se muestra al tocar */
+      nav ul li ul {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+      }
+
+      nav ul li:hover > ul {
+        display: none;
+      }
+
+      nav ul li.active > ul {
+        display: block;
+      }
+
+      .buscador {
+        width: 100%;
+        margin: 10px 0;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    /* BANNER */
     .banner img {
       width: 100%;
       display: block;
@@ -106,31 +159,31 @@
 
 <body>
 
-  <!-- ----------- MENÚ ----------- -->
+  <!-- NAV -->
   <nav>
-    <ul>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+
+    <ul id="menu">
 
       <!-- ACTA DE NACIMIENTO -->
-      <li>
+      <li onclick="toggleSubMenu(event)">
         <a href="https://gobmx.page/ActaNacimiento/">ACTA DE NACIMIENTO</a>
         <ul>
           <li><a href="https://www.gob.mx/ActaNacimiento/folioSeguimiento/">FOLIO DE SEGUIMIENTO</a></li>
           <li><a href="acta.html">INFORMACIÓN QUE NECESITAS</a></li>
-          <li><a href="#">...</a></li>
         </ul>
       </li>
 
       <!-- CURP -->
-      <li>
+      <li onclick="toggleSubMenu(event)">
         <a href="https://www.gob.mx/curp/">CURP</a>
         <ul>
           <li><a href="curp.html">INFORMACIÓN QUE NECESITAS</a></li>
-          <li><a href="#">...</a></li>
         </ul>
       </li>
 
       <!-- LICENCIA -->
-      <li>
+      <li onclick="toggleSubMenu(event)">
         <a href="https://share.google/7ZWnSaU9mCdwy5HCt">LICENCIA DE CONDUCIR</a>
         <ul>
           <li><a href="https://smovilidad.edomex.gob.mx/citas_internet">AGENDAR CITAS</a></li>
@@ -139,7 +192,7 @@
       </li>
 
       <!-- SAT -->
-      <li>
+      <li onclick="toggleSubMenu(event)">
         <a href="https://share.google/D3IEMuwBrTL2FHDaa">SAT</a>
         <ul>
           <li><a href="https://citas.sat.gob.mx/">AGENDAR CITAS</a></li>
@@ -151,7 +204,7 @@
       </li>
 
       <!-- REGISTRO CIVIL -->
-      <li>
+      <li onclick="toggleSubMenu(event)">
         <a href="https://share.google/bEhPbZOFD9ReqhYrG">REGISTRO CIVIL</a>
         <ul>
           <li><a href="regciv.html">INFORMACIÓN QUE NECESITAS</a></li>
@@ -159,14 +212,14 @@
       </li>
 
       <!-- PASAPORTE -->
-      <li>
+      <li onclick="toggleSubMenu(event)">
         <a href="https://share.google/xf8e4fKcFUgO9Znsu">PASAPORTE</a>
         <ul>
           <li><a href="pass.html">INFORMACIÓN QUE NECESITAS</a></li>
         </ul>
       </li>
 
-      <!-- ÍCONO HOME -->
+      <!-- HOME -->
       <li>
         <a href="index3.html"><img src="inte.png" width="60" height="60"></a>
       </li>
@@ -186,6 +239,18 @@
   <div class="banner">
     <img src="tr1.png">
   </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('show');
+    }
+
+    function toggleSubMenu(event) {
+      if (window.innerWidth <= 768) {
+        event.currentTarget.classList.toggle('active');
+      }
+    }
+  </script>
 
 </body>
 </html>
