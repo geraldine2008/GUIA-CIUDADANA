@@ -1,130 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantel Valle de Bravo</title>
-    <link rel="stylesheet" href="principal.css">
-    <link rel="icon" href="img/unnamed-removebg-preview.png" type="png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía Digital Ciudadana</title>
 
-    <style>
-        /* --- TUS ESTILOS ORIGINALES --- */
-        .fondo-valle{
-            background-image: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
-            background-size: cover;
-            background-position: center center;
-            width: 100%;
-            height: 80vh;
-            background-attachment: fixed;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f1f8;
+    }
 
-        /* --- CENTRADO GENERAL --- */
-        section {
-            text-align: center;
-        }
+    /* ---------- MENÚ ---------- */
+    nav {
+      background: #D8B7E6;
+      padding: 0;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        h2 {
-            font-size: 28px;
-            color: #00c4cc;
-            font-weight: bold;
-            margin-bottom: 25px;
-        }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
 
-        /* --- CARRUSEL ARREGLADO Y CENTRADO --- */
-        .content-all {
-            width: 100%;
-            display: flex;
-            justify-content: center; /* CENTRA */
-            align-items: center;      /* CENTRA */
-            margin-top: 30px;
-        }
+    nav ul li {
+      position: relative;
+    }
 
-        .content-carrousel {
-            width: 280px;          /* tamaño perfecto para celular */
-            height: 350px;
-            position: relative;
-            transform-style: preserve-3d;
-            animation: rotar 18s infinite linear;
-        }
+    nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .content-carrousel figure {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            overflow: hidden;
-            border-radius: 20px;
-        }
+    nav ul li a:hover {
+      background: #B694C8;
+    }
 
-        .content-carrousel img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* evita deformación */
-        }
+    /* ---------- SUBMENÚ ---------- */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #EBD9F3;
+      min-width: 200px;
+      padding: 0;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
 
-        /* --- POSICIONES DE TUS 8 IMÁGENES --- */
-        .content-carrousel figure:nth-child(1){ transform: rotateY(0deg) translateZ(350px); }
-        .content-carrousel figure:nth-child(2){ transform: rotateY(45deg) translateZ(350px); }
-        .content-carrousel figure:nth-child(3){ transform: rotateY(90deg) translateZ(350px); }
-        .content-carrousel figure:nth-child(4){ transform: rotateY(135deg) translateZ(350px); }
-        .content-carrousel figure:nth-child(5){ transform: rotateY(180deg) translateZ(350px); }
-        .content-carrousel figure:nth-child(6){ transform: rotateY(225deg) translateZ(350px); }
-        .content-carrousel figure:nth-child(7){ transform: rotateY(270deg) translateZ(350px); }
-        .content-carrousel figure:nth-child(8){ transform: rotateY(315deg) translateZ(350px); }
+    nav ul li ul li a {
+      padding: 12px 15px;
+      color: #5a3e68;
+      font-weight: normal;
+    }
 
-        @keyframes rotar {
-            from { transform: rotateY(0deg); }
-            to   { transform: rotateY(360deg); }
-        }
+    nav ul li ul li a:hover {
+      background: #d7b8e6;
+    }
 
-    </style>
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    /* ---------- BUSCADOR ---------- */
+    .buscador {
+      margin-left: auto;
+      padding: 10px;
+    }
+
+    .buscador input[type="search"] {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .buscador input[type="submit"] {
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: none;
+      background: #B694C8;
+      color: white;
+      cursor: pointer;
+    }
+
+    .buscador input[type="submit"]:hover {
+      background: #9e7ab3;
+    }
+
+    /* --------- IMAGEN HEADER --------- */
+    .banner img {
+      width: 100%;
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="header">
-        <div class="inner-header flex">
-            <h1>
-                <img src="cd3.png" style="width: 900px;"><br>
-                <img src="cl2.png" style="width: 600px;">
-            </h1>
-        </div>
+  <!-- ----------- MENÚ ----------- -->
+  <nav>
+    <ul>
 
-        <div>
-            <svg class="agua" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 24 150 28" preserveAspectRatio="none">
-                <defs>
-                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18
-                    58-18 88-18 58 18 88 18v44h-352z" />
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-                </g>
-            </svg>
-        </div>
-    </div>
+      <!-- ACTA DE NACIMIENTO -->
+      <li>
+        <a href="https://gobmx.page/ActaNacimiento/">ACTA DE NACIMIENTO</a>
+        <ul>
+          <li><a href="https://www.gob.mx/ActaNacimiento/folioSeguimiento/">FOLIO DE SEGUIMIENTO</a></li>
+          <li><a href="acta.html">INFORMACIÓN QUE NECESITAS</a></li>
+          <li><a href="#">...</a></li>
+        </ul>
+      </li>
 
-    <!-- ------------ GALERÍA ARREGLADA ---------------- -->
-    <section>
-        <h2>TU IDENTIDAD, TUS DOCUMENTOS</h2>
+      <!-- CURP -->
+      <li>
+        <a href="https://www.gob.mx/curp/">CURP</a>
+        <ul>
+          <li><a href="curp.html">INFORMACIÓN QUE NECESITAS</a></li>
+          <li><a href="#">...</a></li>
+        </ul>
+      </li>
 
-        <div class="content-all">
-            <div class="content-carrousel">
-                <figure><img src="acta.jpg"></figure>
-                <figure><img src="curp.jpg"></figure>
-                <figure><img src="ine.jpg"></figure>
-                <figure><img src="mex.jpeg"></figure>
-                <figure><img src="lic.jpg"></figure>
-                <figure><img src="vis.jpg"></figure>
-                <figure><img src="acta.jpg"></figure>
-                <figure><img src="curp.jpg"></figure>
-            </div>
-        </div>
-    </section>
+      <!-- LICENCIA -->
+      <li>
+        <a href="https://share.google/7ZWnSaU9mCdwy5HCt">LICENCIA DE CONDUCIR</a>
+        <ul>
+          <li><a href="https://smovilidad.edomex.gob.mx/citas_internet">AGENDAR CITAS</a></li>
+          <li><a href="liccon.html">INFORMACIÓN QUE NECESITAS</a></li>
+        </ul>
+      </li>
 
-    <div class="separador"></div>
+      <!-- SAT -->
+      <li>
+        <a href="https://share.google/D3IEMuwBrTL2FHDaa">SAT</a>
+        <ul>
+          <li><a href="https://citas.sat.gob.mx/">AGENDAR CITAS</a></li>
+          <li><a href="https://share.google/kg2M34giuzqjyeFCn">RFC</a></li>
+          <li><a href="https://share.google/XewbSv71jWmGKOI32">CONSTANCIA</a></li>
+          <li><a href="https://share.google/cjTLGDloj8WC7sskx">DECLARACIÓN</a></li>
+          <li><a href="SAT.html">INFORMACIÓN QUE NECESITAS</a></li>
+        </ul>
+      </li>
+
+      <!-- REGISTRO CIVIL -->
+      <li>
+        <a href="https://share.google/bEhPbZOFD9ReqhYrG">REGISTRO CIVIL</a>
+        <ul>
+          <li><a href="regciv.html">INFORMACIÓN QUE NECESITAS</a></li>
+        </ul>
+      </li>
+
+      <!-- PASAPORTE -->
+      <li>
+        <a href="https://share.google/xf8e4fKcFUgO9Znsu">PASAPORTE</a>
+        <ul>
+          <li><a href="pass.html">INFORMACIÓN QUE NECESITAS</a></li>
+        </ul>
+      </li>
+
+      <!-- ÍCONO HOME -->
+      <li>
+        <a href="index3.html"><img src="inte.png" width="60" height="60"></a>
+      </li>
+
+      <!-- BUSCADOR -->
+      <li class="buscador">
+        <form method="get" action="https://www.google.com/search" target="_blank">
+          <input type="search" name="q" placeholder="Buscar aquí..." required>
+          <input type="submit" value="Buscar">
+        </form>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!-- BANNER -->
+  <div class="banner">
+    <img src="tr1.png">
+  </div>
 
 </body>
 </html>
