@@ -1,233 +1,130 @@
-<!doctype html>
-<html lang="es">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GUÍA DIGITAL CIUDADANA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantel Valle de Bravo</title>
+    <link rel="stylesheet" href="principal.css">
+    <link rel="icon" href="img/unnamed-removebg-preview.png" type="png">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+    <style>
+        /* --- TUS ESTILOS ORIGINALES --- */
+        .fondo-valle{
+            background-image: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            height: 80vh;
+            background-attachment: fixed;
+        }
 
-    /* ---- MENÚ PRINCIPAL ---- */
-    nav {
-      background: #E9D3F0; /* Mantiene tu color */
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 5px 10px;
-    }
+        /* --- CENTRADO GENERAL --- */
+        section {
+            text-align: center;
+        }
 
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-    }
+        h2 {
+            font-size: 28px;
+            color: #00c4cc;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
 
-    nav ul li {
-      position: relative;
-    }
+        /* --- CARRUSEL ARREGLADO Y CENTRADO --- */
+        .content-all {
+            width: 100%;
+            display: flex;
+            justify-content: center; /* CENTRA */
+            align-items: center;      /* CENTRA */
+            margin-top: 30px;
+        }
 
-    nav ul li a {
-      display: block;
-      padding: 12px 16px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        .content-carrousel {
+            width: 280px;          /* tamaño perfecto para celular */
+            height: 350px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotar 18s infinite linear;
+        }
 
-    nav ul li a:hover {
-      background: #BFA2BD; /* Mantiene tu color hover */
-      border-radius: 6px;
-    }
+        .content-carrousel figure {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            border-radius: 20px;
+        }
 
-    /* ---- SUBMENÚ ---- */
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #F8F8F8;
-      padding: 0;
-      min-width: 180px;
-      border-radius: 5px;
-      z-index: 1000;
-    }
+        .content-carrousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* evita deformación */
+        }
 
-    nav ul li ul li a {
-      color: #000;
-      padding: 10px 15px;
-      display: block;
-    }
+        /* --- POSICIONES DE TUS 8 IMÁGENES --- */
+        .content-carrousel figure:nth-child(1){ transform: rotateY(0deg) translateZ(350px); }
+        .content-carrousel figure:nth-child(2){ transform: rotateY(45deg) translateZ(350px); }
+        .content-carrousel figure:nth-child(3){ transform: rotateY(90deg) translateZ(350px); }
+        .content-carrousel figure:nth-child(4){ transform: rotateY(135deg) translateZ(350px); }
+        .content-carrousel figure:nth-child(5){ transform: rotateY(180deg) translateZ(350px); }
+        .content-carrousel figure:nth-child(6){ transform: rotateY(225deg) translateZ(350px); }
+        .content-carrousel figure:nth-child(7){ transform: rotateY(270deg) translateZ(350px); }
+        .content-carrousel figure:nth-child(8){ transform: rotateY(315deg) translateZ(350px); }
 
-    nav ul li ul li a:hover {
-      background: #E3B8E0;
-    }
+        @keyframes rotar {
+            from { transform: rotateY(0deg); }
+            to   { transform: rotateY(360deg); }
+        }
 
-    nav ul li:hover > ul {
-      display: block;
-    }
-
-    /* ---- BUSCADOR ---- */
-    .buscador form {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      background: white;
-      border-radius: 8px;
-      padding: 4px 6px;
-    }
-
-    input[type="search"] {
-      padding: 6px;
-      border: none;
-      outline: none;
-      border-radius: 6px;
-      width: 160px;
-    }
-
-    input[type="submit"] {
-      background: #BFA2BD;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 5px;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background: #E3B8E0;
-      color: black;
-    }
-
-    /* ---- BOTÓN CENTRAL ---- */
-    .btn {
-      background-color: #f5f7fb;
-      border: 1px solid #d0d9ee;
-      border-radius: 8px;
-      padding: 6px 10px;
-      font-size: 14px;
-      color: #0b3d91;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      background-color: #e0e5f2;
-    }
-
-    /* ---- IMAGEN PRINCIPAL ---- */
-    img.portada {
-      width: 100%;
-      max-width: 1340px;
-      display: block;
-      margin: 0 auto;
-      border-radius: 8px;
-    }
-
-    /* ---- MÓVIL ---- */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .buscador {
-        margin-top: 10px;
-      }
-
-      input[type="search"] {
-        width: 200px;
-      }
-
-      nav ul li ul {
-        position: static;
-      }
-    }
-  </style>
+    </style>
 </head>
 
 <body>
-  <!-- MENÚ PRINCIPAL -->
-  <nav>
-    <ul>
-      <li><a href="https://gobmx.page/ActaNacimiento/">ACTA DE NACIMIENTO</a>
-        <ul>
-          <li><a href="https://www.gob.mx/ActaNacimiento/folioSeguimiento/">FOLIO DE SEGUIMIENTO</a></li>
-          <li><a href="acta.html">INFORMACIÓN QUE NECESITAS</a></li>
-          <li><a href="#">.......</a></li>
-        </ul>
-      </li>
 
-      <li><a href="https://www.gob.mx/curp/">CURP</a>
-        <ul>
-          <li><a href="curp.html">INFORMACIÓN QUE NECESITAS</a></li>
-          <li><a href="#">.......</a></li>
-        </ul>
-      </li>
+    <div class="header">
+        <div class="inner-header flex">
+            <h1>
+                <img src="cd3.png" style="width: 900px;"><br>
+                <img src="cl2.png" style="width: 600px;">
+            </h1>
+        </div>
 
-      <li><a href="https://share.google/7ZWnSaU9mCdwy5HCt">LICENCIA DE CONDUCIR</a>
-        <ul>
-          <li><a href="https://smovilidad.edomex.gob.mx/citas_internet">AGENDAR CITAS</a></li>
-          <li><a href="liccon.html">INFORMACIÓN QUE NECESITAS</a></li>
-        </ul>
-      </li>
+        <div>
+            <svg class="agua" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18
+                    58-18 88-18 58 18 88 18v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+    </div>
 
-      <li><a href="https://share.google/D3IEMuwBrTL2FHDaa">SAT</a>
-        <ul>
-          <li><a href="https://citas.sat.gob.mx/">AGENDAR CITAS</a></li>
-          <li><a href="https://share.google/kg2M34giuzqjyeFCn">RFC</a></li>
-          <li><a href="https://share.google/XewbSv71jWmGKOI32">CONSTANCIA DE SITUACIÓN FISCAL</a></li>
-          <li><a href="https://share.google/cjTLGDloj8WC7sskx">DECLARACIÓN PERSONAS FÍSICAS</a></li>
-          <li><a href="SAT.html">INFORMACIÓN QUE NECESITAS</a></li>
-        </ul>
-      </li>
+    <!-- ------------ GALERÍA ARREGLADA ---------------- -->
+    <section>
+        <h2>TU IDENTIDAD, TUS DOCUMENTOS</h2>
 
-      <li><a href="https://share.google/bEhPbZOFD9ReqhYrG">REGISTRO CIVIL</a>
-        <ul>
-          <li><a href="regciv.html">INFORMACIÓN QUE NECESITAS</a></li>
-        </ul>
-      </li>
+        <div class="content-all">
+            <div class="content-carrousel">
+                <figure><img src="acta.jpg"></figure>
+                <figure><img src="curp.jpg"></figure>
+                <figure><img src="ine.jpg"></figure>
+                <figure><img src="mex.jpeg"></figure>
+                <figure><img src="lic.jpg"></figure>
+                <figure><img src="vis.jpg"></figure>
+                <figure><img src="acta.jpg"></figure>
+                <figure><img src="curp.jpg"></figure>
+            </div>
+        </div>
+    </section>
 
-      <li><a href="https://share.google/xf8e4fKcFUgO9Znsu">PASAPORTE</a>
-        <ul>
-          <li><a href="pass.html">INFORMACIÓN QUE NECESITAS</a></li>
-        </ul>
-      </li>
+    <div class="separador"></div>
 
-      <li><a href="index3.html"><img src="inte.png" width="60" height="60" alt="Inicio"></a></li>
-
-      <li class="buscador">
-        <form method="get" action="https://www.google.com/search" target="_blank">
-          <input type="search" name="q" placeholder="Introducir búsqueda" required>
-          <input type="submit" value="Buscar">
-        </form>
-      </li>
-    </ul>
-  </nav>
-
-  <center>
-    <div style="text-align: center; padding: 8px;">
-      <a class="btn" href="https://drive.google.com/uc?export=download&id=12L1MOCGDVou8J0u33RkzgyIzOi0MR810" download>
-  Requisitos de trámites
-</a>
-   </div>
-
-    <img src="tr1.png" class="portada" alt="Trámites Digitales">
-  </center>
 </body>
-
 </html>
