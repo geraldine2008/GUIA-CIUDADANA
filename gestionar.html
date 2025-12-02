@@ -234,23 +234,6 @@
 
     </ul>
   </nav>
-
-  <!-- BANNER -->
-  <div class="banner">
-    <img src="tr1.png">
-  </div>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('menu').classList.toggle('show');
-    }
-
-    function toggleSubMenu(event) {
-      if (window.innerWidth <= 768) {
-        event.currentTarget.classList.toggle('active');
-      }
-    }
-  </script>
   <a href="https://drive.google.com/uc?export=download&id=12L1MOCGDVou8J0u33RkzgyIzOi0MR810" 
    download 
    style="
@@ -269,7 +252,22 @@
    onmouseout="this.style.background='#8a2be2'">
    Guía rápida
 </a>
+  <!-- BANNER -->
+  <div class="banner">
+    <img src="tr1.png">
+  </div>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('show');
+    }
+
+    function toggleSubMenu(event) {
+      if (window.innerWidth <= 768) {
+        event.currentTarget.classList.toggle('active');
+      }
+    }
+  </script>
 
 </body>
 </html>
