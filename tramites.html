@@ -1,25 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantel Valle de Bravo</title>
-
-    <!-- Ícono -->
-    <link rel="icon" href="img/unnamed-removebg-preview.png" type="image/png">
-
-    <!-- Tu CSS -->
+    <title>Tramites</title>
     <link rel="stylesheet" href="principal.css">
-
-    <!-- LIGHTBOX CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- LIGHTBOX JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <link rel="icon" href="img/unnamed-removebg-preview.png" type="png">
 
     <style>
-        /* Fondo degradado */
-        .fondo-valle {
+
+        /* --- FONDO ORIGINAL --- */
+        .fondo-valle{
             background-image: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
             background-size: cover;
             background-position: center center;
@@ -28,7 +19,7 @@
             background-attachment: fixed;
         }
 
-        .contenido-fondo-valle {
+        .contenido-fondo-valle{
             display: flex;
             width: 100%;
             height: 100%;
@@ -37,83 +28,102 @@
             align-items: center;
         }
 
-        /* Animación de olas */
         @keyframes move_wave {
-            0% { transform: translateX(0) scaleY(1); }
-            50% { transform: translateX(-25%) scaleY(0.55); }
-            100% { transform: translateX(-50%) scaleY(1); }
+            0% { transform: translateX(0) scaleY(1) }
+            50% { transform: translateX(-25%) scaleY(0.55) }
+            100% { transform: translateX(-50%) scaleY(1) }
         }
-    </style>
 
+        /* ------------------------------------------------- */
+        /*            FONDO DETRÁS DEL PANAL                */
+        /* ------------------------------------------------- */
+        .fondo-panal{
+            width: 100%;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #d1e9ff 0%, #b6d7ff 50%, #d1e9ff 100%);
+            background-size: cover;
+        }
+
+        /* ------------------------------------------------- */
+        /*               PANAL HEXAGONAL                     */
+        /* ------------------------------------------------- */
+
+        .panal{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .hex{
+            width: 160px;
+            height: 140px;
+            clip-path: polygon(
+                50% 0%,
+                93% 25%,
+                93% 75%,
+                50% 100%,
+                7% 75%,
+                7% 25%
+            );
+            overflow: hidden;
+            background: white;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.25);
+        }
+
+        .hex img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .fila{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .fila2{
+            margin-top: 40px;
+        }
+
+    </style>
 </head>
 <body>
 
-    <!-- Título -->
-    <img src="TITU.png" alt="Título">
+    <h1 style="text-align: center; font-size: 50px; color:#000; margin-top: 20px;">
+        TRAMITES CIUDADANOS ADMINISTRATIVOS.
+    </h1>
 
-    <section class="gal"><br>
+    <!-- 🔵 FONDO DETRÁS DEL PANAL -->
+    <div class="fondo-panal">
 
-        <main id="galeria" class="galeria">
+        <!-- 🌟 PANAL HEXAGONAL COMPLETO -->
+        <div class="panal">
 
-            <!-- Cada imagen dentro de la galería -->
-
-            <div class="galeria_item">
-                <a href="tr.jpg" data-lightbox="models" data-title="Imagen 2">
-                    <img src="tr.jpg" alt="">
-                </a>
+            <div class="fila fila1">
+                <div class="hex"><img src="tr.jpg"></div>
+                <div class="hex"><img src="ine2.jpg"></div>
+                <div class="hex"><img src="sol.jpg"></div>
             </div>
 
-            <div class="galeria_item">
-                <a href="ine2.jpg" data-lightbox="models" data-title="Imagen 3">
-                    <img src="ine2.jpg" alt="">
-                </a>
+            <div class="fila fila2">
+                <div class="hex"><img src="pas.jpg"></div>
+                <div class="hex"><img src="con2.jpg"></div>
+                <div class="hex"><img src="reg2.jpg.png"></div>
+                <div class="hex"><img src="inss.jpg"></div>
             </div>
 
-            <div class="galeria_item">
-                <a href="sol.jpg" data-lightbox="models" data-title="Imagen 4">
-                    <img src="sol.jpg" alt="">
-                </a>
+            <div class="fila fila3">
+                <div class="hex"><img src="SAT.jpg"></div>
+                <div class="hex"><img src="cons.jpg"></div>
             </div>
 
-            <div class="galeria_item">
-                <a href="pas.jpg" data-lightbox="models" data-title="Imagen 5">
-                    <img src="pas.jpg" alt="">
-                </a>
-            </div>
+        </div>
 
-            <div class="galeria_item">
-                <a href="con2.jpg" data-lightbox="models" data-title="Imagen 6">
-                    <img src="con2.jpg" alt="">
-                </a>
-            </div>
-
-            <div class="galeria_item">
-                <a href="reg2.jpg.png" data-lightbox="models" data-title="Imagen 7">
-                    <img src="reg2.jpg.png" alt="">
-                </a>
-            </div>
-
-            <div class="galeria_item">
-                <a href="inss.jpg" data-lightbox="models" data-title="Imagen 8">
-                    <img src="inss.jpg" alt="">
-                </a>
-            </div>
-
-            <div class="galeria_item">
-                <a href="SAT.jpg" data-lightbox="models" data-title="Imagen 9">
-                    <img src="SAT.jpg" alt="">
-                </a>
-            </div>
-
-            <div class="galeria_item">
-                <a href="cons.jpg" data-lightbox="models" data-title="Imagen 10">
-                    <img src="cons.jpg" alt="">
-                </a>
-            </div>
-
-        </main>
-
-    </section>
+    </div>
 
 </body>
 </html>
