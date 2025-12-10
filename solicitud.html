@@ -3,102 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solicitud de Trámites | Guía Digital Ciudadana</title>
+    <title>Solicitudes | Guía Digital Ciudadana</title>
     <link rel="stylesheet" href="estilos_geraldine5.css">
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
     <header class="header">
         <h1 class="titulo-principal">Guía Digital Ciudadana</h1>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
     <main>
 
         <section class="tramites-container">
-            <h1>Guía General de Solicitudes</h1>
+            <h1>Solicitudes Disponibles</h1>
             <p class="intro">
-                Consulta aquí los requisitos, pasos y documentos necesarios para realizar trámites generales
-                como constancias, certificados, permisos, citas oficiales, comprobantes y más.
+                Encuentra aquí los requisitos, pasos y documentos necesarios para solicitar trámites
+                como actas, CURP, licencias, pasaporte, RFC, certificados y más.
             </p>
 
-            <!-- ⬇️ ESPACIO PARA EL VIDEO ⬇️ -->
+            <!-- ESPACIO PARA VIDEO -->
             <div class="video-container">
                 <h2>Video Explicativo</h2>
                 <video controls>
-                    <!-- Cambia "video/mi_video.mp4" por tu archivo -->
-                    <source src="video/mi_video.mp4" type="video/mp4">
+                    <source src="video/solicitudes.mp4" type="video/mp4">
                     Tu navegador no soporta reproducción de video.
                 </video>
             </div>
-            <!-- ⬆️ ESPACIO PARA EL VIDEO ⬆️ -->
 
-            <!-- TARJETA 1: CONSTANCIA GENERAL -->
+            <!-- ACTA DE NACIMIENTO -->
             <div class="tramite-card">
-                <h2>Solicitud de Constancia General</h2>
-                <img src="constan.jpg" alt="Constancia">
+                <h2>Solicitud de Acta de Nacimiento</h2>
+                <img src="acta.jpg" alt="Acta de nacimiento">
+
+                <h3>Requisitos</h3>
+                <ul>
+                    <li>CURP o datos personales completos</li>
+                    <li>Nombre de padre o madre</li>
+                    <li>Lugar y fecha de nacimiento</li>
+                    <li>Pago correspondiente (si aplica)</li>
+                </ul>
+
+                <h3>Pasos</h3>
+                <ol>
+                    <li>Ingresa al sitio oficial o acude al registro civil.</li>
+                    <li>Proporciona tu CURP o datos personales.</li>
+                    <li>Realiza el pago correspondiente.</li>
+                    <li>Descarga o recoge tu acta certificada.</li>
+                </ol>
+            </div>
+
+            <!-- CURP -->
+            <div class="tramite-card">
+                <h2>Solicitud de CURP</h2>
+                <img src="curp.jpg" alt="CURP">
+
+                <h3>Requisitos</h3>
+                <ul>
+                    <li>Acta de nacimiento</li>
+                    <li>Identificación oficial</li>
+                </ul>
+
+                <h3>Pasos</h3>
+                <ol>
+                    <li>Ingresa al portal de CURP o acude al módulo más cercano.</li>
+                    <li>Proporciona tu acta de nacimiento e identificación.</li>
+                    <li>Confirma tus datos personales.</li>
+                    <li>Descarga o solicita tu formato CURP.</li>
+                </ol>
+            </div>
+
+            <!-- LICENCIA DE CONDUCIR -->
+            <div class="tramite-card">
+                <h2>Solicitud de Licencia de Conducir</h2>
+                <img src="licencia.jpg" alt="Licencia de conducir">
 
                 <h3>Requisitos</h3>
                 <ul>
                     <li>Identificación oficial</li>
-                    <li>CURP</li>
                     <li>Comprobante de domicilio</li>
-                    <li>Formato de solicitud</li>
+                    <li>CURP</li>
+                    <li>Examen médico (si aplica)</li>
+                    <li>Pago correspondiente</li>
                 </ul>
 
                 <h3>Pasos</h3>
                 <ol>
-                    <li>Acude a la institución correspondiente o realiza el trámite en línea.</li>
-                    <li>Entrega los documentos o súbelos a la plataforma.</li>
-                    <li>Llena el formulario de solicitud.</li>
-                    <li>Espera el tiempo de procesamiento indicado.</li>
-                    <li>Recoge o descarga tu constancia.</li>
+                    <li>Agenda tu cita en el portal de movilidad.</li>
+                    <li>Acude el día indicado con tus documentos.</li>
+                    <li>Realiza el pago.</li>
+                    <li>Entregan tu licencia impresa.</li>
                 </ol>
             </div>
 
-            <!-- TARJETA 2: PERMISO O AUTORIZACIÓN -->
+            <!-- RFC / SAT -->
             <div class="tramite-card">
-                <h2>Solicitud de Permiso o Autorización</h2>
-                <img src="autor.jpg" alt="Permiso">
+                <h2>Solicitud de RFC (SAT)</h2>
+                <img src="rfc.jpg" alt="RFC SAT">
+
+                <h3>Requisitos</h3>
+                <ul>
+                    <li>CURP</li>
+                    <li>Identificación oficial</li>
+                    <li>Comprobante de domicilio (si aplica)</li>
+                    <li>Correo electrónico activo</li>
+                </ul>
+
+                <h3>Pasos</h3>
+                <ol>
+                    <li>Ingresa al portal del SAT y selecciona “Inscripción al RFC”.</li>
+                    <li>Llena tus datos personales.</li>
+                    <li>Agenda cita si lo solicita el sistema.</li>
+                    <li>Obtén tu RFC y constancia de situación fiscal.</li>
+                </ol>
+            </div>
+
+            <!-- REGISTRO CIVIL -->
+            <div class="tramite-card">
+                <h2>Solicitudes del Registro Civil</h2>
+                <img src="registro.jpg" alt="Registro civil">
 
                 <h3>Requisitos</h3>
                 <ul>
                     <li>Identificación oficial</li>
-                    <li>Comprobante de pago (si aplica)</li>
-                    <li>Formato de solicitud</li>
+                    <li>CURP</li>
+                    <li>Datos del acta que deseas solicitar</li>
                 </ul>
 
                 <h3>Pasos</h3>
                 <ol>
-                    <li>Identifica el tipo de permiso que necesitas.</li>
-                    <li>Reúne los documentos solicitados.</li>
-                    <li>Realiza el pago correspondiente (si es requerido).</li>
-                    <li>Entrega tus documentos o súbelos en la plataforma.</li>
-                    <li>Espera la resolución o aprobación.</li>
+                    <li>Selecciona el tipo de acta (matrimonio, nacimiento, defunción, etc.).</li>
+                    <li>Proporciona los datos completos.</li>
+                    <li>Realiza el pago correspondiente.</li>
+                    <li>Descarga o recoge tu documento.</li>
                 </ol>
             </div>
 
-            <!-- TARJETA 3: CITA OFICIAL -->
+            <!-- PASAPORTE -->
             <div class="tramite-card">
-                <h2>Solicitud de Cita Oficial</h2>
-                <img src="cita.jpg" alt="Cita oficial">
+                <h2>Solicitud de Pasaporte</h2>
+                <img src="pasaporte.jpg" alt="Pasaporte">
 
                 <h3>Requisitos</h3>
                 <ul>
-                    <li>Datos personales</li>
+                    <li>Identificación oficial</li>
+                    <li>Acta de nacimiento</li>
                     <li>CURP</li>
-                    <li>Correo electrónico</li>
+                    <li>Comprobante de pago</li>
+                    <li>Cita confirmada</li>
                 </ul>
 
                 <h3>Pasos</h3>
                 <ol>
-                    <li>Selecciona el tipo de cita que necesitas.</li>
-                    <li>Llena el formulario con tus datos.</li>
-                    <li>Selecciona fecha y horario disponible.</li>
-                    <li>Confirma la cita y guarda tu comprobante.</li>
-                    <li>Acude el día indicado con los documentos necesarios.</li>
+                    <li>Solicita una cita en el portal de la SRE.</li>
+                    <li>Realiza el pago.</li>
+                    <li>Acude con tus documentos.</li>
+                    <li>Te toman foto y huellas.</li>
+                    <li>Recibes tu pasaporte.</li>
                 </ol>
             </div>
 
@@ -106,9 +167,8 @@
 
     </main>
 
-    <!-- PIE DE PÁGINA -->
     <footer class="footer">
-        <p> 2025 Guía Digital Ciudadana — Creado por Geraldine Millán</p>
+        <p>2025 Guía Digital Ciudadana — Creado por Geraldine Millán</p>
     </footer>
 
 </body>
