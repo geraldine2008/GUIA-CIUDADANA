@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f0ff;
+    margin: 0;
+    padding: 0;
+}
+
+/* ENCABEZADO */
+.header {
+    background: #7b2cbf;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.nav a {
+    color: #ede0ff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a.activo {
+    border-bottom: 2px solid #e0b3ff;
+}
+
+/* CONTENIDO */
+.tramites-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.tramites-container h1 {
+    color: #5a189a;
+    text-align: center;
+    font-size: 32px;
+}
+
+.intro {
+    text-align: center;
+    color: #4a166e;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* CARDS */
+.tramite-card {
+    background: white;
+    border-left: 6px solid #9d4edd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 10px #e9d5ff;
+}
+
+.tramite-card h2 {
+    color: #5a189a;
+}
+
+.tramite-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 10px 0 20px;
+}
+
+.tramite-card h3 {
+    color: #7b2cbf;
+    margin-top: 15px;
+}
+
+/* PIE */
+.footer {
+    background: #5a189a;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
